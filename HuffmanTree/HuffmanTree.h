@@ -1,5 +1,5 @@
-/* **************
-*6.6¹ş·òÂüÊ÷µÄÏà¹Ø²Ù×÷
+ï»¿/* **************
+*6.6å“ˆå¤«æ›¼æ ‘çš„ç›¸å…³æ“ä½œ
 *
 ****************/
 #ifndef HUFFMANTREE_H
@@ -11,28 +11,28 @@
 #include "Status.h"
 #include "Scanf.c"
 
-/*ºê¶¨Òå*/
-#define MAX_TREE_SIZE 100//ÊıµÄ×î´ó½Úµã
+/*å®å®šä¹‰*/
+#define MAX_TREE_SIZE 100//æ•°çš„æœ€å¤§èŠ‚ç‚¹
 
-/*¹ş·òÂüÊ÷ºÍ¹ş·òÂü±àÂëµÄÀàĞÍ¶¨Òå*/
+/*å“ˆå¤«æ›¼æ ‘å’Œå“ˆå¤«æ›¼ç¼–ç çš„ç±»å‹å®šä¹‰*/
 typedef struct
 {
-    unsigned int weight;//È¨
+    unsigned int weight;//æƒ
     unsigned int parent;
     unsigned int lchild;
     unsigned int rchild;
 }HTNode;
 
-typedef HTNode* HuffmanTree; //¶¯Ì¬·ÖÅäÊı×é´¢´æ¹ş·òÂüÊ÷
+typedef HTNode* HuffmanTree; //åŠ¨æ€åˆ†é…æ•°ç»„å‚¨å­˜å“ˆå¤«æ›¼æ ‘
 typedef char* HCNode;
-typedef HCNode* HuffmanCode; //¶¯Ì¬·ÖÅäÊı×é´¢´æ¹ş·òÂü±àÂë±í
+typedef HCNode* HuffmanCode; //åŠ¨æ€åˆ†é…æ•°ç»„å‚¨å­˜å“ˆå¤«æ›¼ç¼–ç è¡¨
 
-/*º¯Êıs*/
+/*å‡½æ•°s*/
 void InitTree_HT(HuffmanTree *HT);
 Status CreatHuffmanTree_HT(FILE *fp,HuffmanTree *HT);
-Status Select_HT(HuffmanTree HT;int end,int *order_1,int *order_2);//´Ó1µ½endÒÀ´ÎÑ¡³öÈ¨Öµ×îĞ¡ÇÒÎ´±àÈëÊ÷µÄÁ½¸ö½ÚµãµÄĞòºÅorder_1,order_2
-Status HuffmanCodeing_HT_1(HuffmanTree *HT,HuffmanCode *HC);//ÄæĞò¼ÆËã¹ş·òÂü±àÂëÖµ
-Status HuffmanCodeing_HT_2(HuffmanTree *HT,HuffmanCode *HC);//ÏÈĞò±éÀú¼ÆËã¹ş·òÂü±àÂëÖµ
-void ShowHuffmanTree_HT(HuffmanTree HT);//Õ¹Ê¾¹ş·òÂüÊ÷
-void ShowHuffmanCode_HT(HuffmanTree HT,HuffmanCode HC);//´òÓ¡¹ş·òÂü±àÂë
+Status Select_HT(HuffmanTree HT;int end,int *order_1,int *order_2);//ä»1åˆ°endä¾æ¬¡é€‰å‡ºæƒå€¼æœ€å°ä¸”æœªç¼–å…¥æ ‘çš„ä¸¤ä¸ªèŠ‚ç‚¹çš„åºå·order_1,order_2
+Status HuffmanCodeing_HT_1(HuffmanTree *HT,HuffmanCode *HC);//é€†åºè®¡ç®—å“ˆå¤«æ›¼ç¼–ç å€¼
+Status HuffmanCodeing_HT_2(HuffmanTree *HT,HuffmanCode *HC);//å…ˆåºéå†è®¡ç®—å“ˆå¤«æ›¼ç¼–ç å€¼
+void ShowHuffmanTree_HT(HuffmanTree HT);//å±•ç¤ºå“ˆå¤«æ›¼æ ‘
+void ShowHuffmanCode_HT(HuffmanTree HT,HuffmanCode HC);//æ‰“å°å“ˆå¤«æ›¼ç¼–ç 
 #endif // HUFFMANTREE_H

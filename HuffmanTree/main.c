@@ -1,5 +1,5 @@
-/*
-*µÚÁùÕÂµÚ6½Ú(6.6)
+ï»¿/*
+*ç¬¬å…­ç« ç¬¬6èŠ‚(6.6)
 */
 #include <stdio.h>
 #include "HuffmanTree.c"
@@ -8,7 +8,7 @@ int main(int argc,char *argv[])
 {
     HuffmanTree HT;
     HuffmanCode HC;
-    printf("³õÊ¼»¯¹ş·òÂüÊ÷ HT...\n");
+    printf("åˆå§‹åŒ–å“ˆå¤«æ›¼æ ‘ HT...\n");
     {
         InitTree_HT(&HT);
         printf("\n");
@@ -17,21 +17,21 @@ int main(int argc,char *argv[])
 
     printf("\n");
     {
-        printf("´´½¨¹ş·òÂüÊ÷ HT...");
-        printf("ÊäÈë8¸ö½ÚµãµÄÈ¨Öµ£º");
-        //¸ÄÁËÒ»¸öÊäÈëº¯Êı
+        printf("åˆ›å»ºå“ˆå¤«æ›¼æ ‘ HT...");
+        printf("è¾“å…¥8ä¸ªèŠ‚ç‚¹çš„æƒå€¼ï¼š");
+        //æ”¹äº†ä¸€ä¸ªè¾“å…¥å‡½æ•°
         printf("\n");
     }
     PressEnter;
 
-    printf("Õ¹Ê¾¹ş·òÂüÊ÷ HT...\n");
+    printf("å±•ç¤ºå“ˆå¤«æ›¼æ ‘ HT...\n");
     {
         ShowHuffmanTree_HT(HT);
         printf("\n");
     }
     PressEnter;
 
-    printf("¼ÆËã¹ş·òÂü±àÂë HC=\n");
+    printf("è®¡ç®—å“ˆå¤«æ›¼ç¼–ç  HC=\n");
     ShowHuffmanCode_HT(HT,HC);
     printf("\n");
     PressEnter;
